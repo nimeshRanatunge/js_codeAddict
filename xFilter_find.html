@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            const people = [{
+                name: 'bob',
+                age: 20,
+                position: 'developer'
+            }, {
+                name: 'peter',
+                age: 28,
+                position: 'designer'
+            }, {
+                name: 'anna',
+                age: 33,
+                position: 'intern'
+            }, ];
+            const dev = people.filter((person) => person.age > 30);
+            console.log(dev[0].age);
+            const devv = people.find((person) => person.age > 20);
+            console.log(devv.age);
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>

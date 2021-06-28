@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- rest - gathers/collects items -->
+
+<body>
+    <script>
+        const fruits = ['banana', 'apple', 'orange', 'graps', 'mango'];
+        const [firstz, ...restOffruits] = fruits;
+        console.log(firstz, restOffruits);
+        // const [fst, secnd] = fruits;
+        // console.log(fst, secnd); //banana apple
+
+        let person = {
+            name: 'john',
+            age: 20,
+            job: 'ux'
+        };
+        let {
+            name,
+            ...rest
+        } = person;
+        console.log(name, rest);
+
+        //FUNCTIONS
+        const getAverage = (name, ...scores) => {
+            console.log(name);
+            console.log(scores);
+            const average = scores.reduce((total, item) => {
+                total += item
+                return total;
+            }, 0) / scores.length;
+            console.log(average);
+        };
+        getAverage(person.name, 10, 20, 30, 40);
+        // instead of number we can give arrray of numbers
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- reduce function iterates the callback function -->
+
+<body>
+    <script>
+        const staff = [{
+            name: 'bob',
+            age: 20,
+            position: 'developer',
+            salary: 100,
+        }, {
+            name: 'peter',
+            age: 28,
+            position: 'designer',
+            salary: 50,
+        }, {
+            name: 'anna',
+            age: 33,
+            position: 'intern',
+            salary: 30,
+        }, ];
+
+        const dailyTotal = staff.reduce((total, person) => {
+            console.log(total);
+            total += person.salary;
+            //console.log(total + 'x');
+            return total;
+        }, 0);
+
+        console.log(dailyTotal);
+    </script>
+</body>
+
+</html>

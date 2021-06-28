@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const cart = [{
+            title: 'samsung galaxy s7',
+            price: 599.99,
+            amount: 1,
+        }, {
+            title: 'pixel',
+            price: 699.99,
+            amount: 2,
+        }, {
+            title: 'xiomi',
+            price: 789.99,
+            amount: 3,
+        }, {
+            title: 'nokia',
+            price: 299.99,
+            amount: 4,
+        }, ];
+        let total = cart.reduce((total, cartItem) => {
+            const {
+                amount,
+                price
+            } = cartItem; //destructing
+            total.totalItems += amount;
+            return total;
+        }, {
+            totalItems: 0,
+            cartTotal: 0
+        })
+        console.log(total);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<p id="x"></p>
+
+<body>
+    <script>
+        const people = [{
+            name: 'anna',
+            age: 25,
+            pos: 'designer'
+        }, {
+            name: 'jane',
+            age: 30,
+            pos: 'ux'
+        }, {
+            name: 'lords',
+            age: 62,
+            pos: 'ui'
+        }, ];
+        const ages = people.map((person) => {
+            console.log(person);
+            return person.age;
+        });
+        const positions = people.map((pers) => {
+            //return pers.pos.toUpperCase(); // return as array
+            return {
+                firstName: pers.name.toUpperCase(), //objects
+                ageMinus5: pers.age - 5,
+            };
+        });
+        const myFunct = (xyz) => xyz.name + ' perera';
+        const names = people.map(myFunct);
+
+        console.log(ages);
+        console.log(positions);
+        console.log(names);
+
+        const nms = people.map((person) => `<p>${person.name}</p>`);
+        document.querySelector('#x').innerHTML = nms.join('oo');
+    </script>
+</body>
+
+</html>

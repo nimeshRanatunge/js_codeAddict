@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="myPara">Hey</p>
+    <script>
+        const menu = [{
+            name: 'a',
+            category: 'aa'
+        }, {
+            name: 'b',
+            category: 'bb'
+        }, {
+            name: 'c',
+            category: 'cc'
+        }, {
+            name: 'd',
+            category: 'dd'
+        }, ];
+        const categories = ['xamarin', ...new Set(menu.map((item) => item.category))]; //new Set for unique values, ... for make objects into arrays
+        console.log(categories);
+        document.querySelector('#myPara').innerHTML = categories.map((categ) => `<button>${categ}</button>`);
+    </script>
+</body>
+
+</html>

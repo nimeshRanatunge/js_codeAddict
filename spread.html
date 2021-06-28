@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- spread operator allows to spread expand individually inside reciever -->
+    <script>
+        const udemy = 'udemy';
+        const letters = [...udemy];
+        console.log(letters);
+
+        const bpoys = ['nimal', 'kamal', 'supujn'];
+        const girls = ['harry', 'sukumala'];
+        const bestfrnd = 'piyum';
+
+        const frnds = [...bpoys, ...girls, bestfrnd];
+
+        console.log(frnds);
+
+        const newfr = [...frnds];
+        newfr[0] = 'sunimal';
+        console.log(frnds);
+        console.log(newfr);
+    </script>
+</body>
+
+</html>

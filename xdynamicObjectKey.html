@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //dot notation
+        const person = {
+            name: 'john',
+        };
+
+        console.log(person.name);
+        person.age = 25;
+        console.log(person);
+
+        //bracket notation
+        const items = {
+            featuredItems: ['item1', 'item2'],
+        };
+        console.log(items.featuredItems);
+        console.log(items['featuredItems']);
+
+        let appState = 'loading';
+        let keyname = 'test1';
+        const app = {
+            [appState]: 'ok', // value of the appState is now a keyname
+        };
+        app[keyname] = 'apple';
+        console.log(app);
+
+        const state = {
+            loading: true,
+            name: '',
+            job: ''
+        };
+        state['class'] = 'first';
+
+        function updatestate(key, value) {
+            state[key] = value;
+        }
+        console.log(state);
+        updatestate('name', 'banana');
+    </script>
+</body>
+
+</html>

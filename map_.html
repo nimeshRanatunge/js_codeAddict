@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="result">xyz</p>
+    <p class="result">xyzz</p>
+    <script>
+        var people = [{
+            name: 'bob',
+            age: 20,
+            position: 'developer'
+        }, {
+            name: 'anna',
+            age: 25,
+            position: 'designer'
+        }, {
+            name: 'susy',
+            age: 30,
+            position: 'the boss'
+        }];
+
+        const namezz = people.map((person) => {
+            return person.name;
+        });
+        console.log(namezz);
+
+        const ages = people.map((person) => {
+            return person.age + 3;
+        });
+        console.log(ages);
+
+        const newPeople = people.map((item) => {
+            return {
+                fname: item.name.toUpperCase(),
+                oldAge: item.age - 10,
+            };
+        });
+        console.log(newPeople);
+
+        const names = people.map((person) => `<h3>${person.name}</h3>`);
+        const result = document.querySelectorAll('.result');
+        result[0].innerHTML = names.join(' ');
+        result[1].innerHTML = names.join('+');
+    </script>
+
+</body>
+
+</html>

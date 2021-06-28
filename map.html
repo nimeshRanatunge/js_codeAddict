@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>New array : <span id="demo"></span></p>
+    <button id="mybutton">CLICK</button>
+
+    <script>
+        var people = [{
+            name: 'bob',
+            age: 20,
+            position: 'developer'
+        }, {
+            name: 'anna',
+            age: 25,
+            position: 'designer'
+        }, {
+            name: 'susy',
+            age: 30,
+            position: 'the boss'
+        }];
+        document.getElementById('mybutton').addEventListener("click", myfunction);
+
+        function myfunction() {
+            document.getElementById('demo').innerHTML = people.map(combine_full_name);
+        }
+
+        function combine_full_name(item) {
+            var fullName = [item.name, item.position].join(" ");
+            return fullName;
+        }
+    </script>
+</body>
+
+</html>

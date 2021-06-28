@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var people = [{
+                name: 'bob',
+                age: 20,
+                position: 'developer'
+            }, {
+                name: 'peter',
+                age: 25,
+                position: 'designer'
+            }, {
+                name: 'susy',
+                age: 30,
+                position: 'the boss'
+            }, {
+                name: 'anna',
+                age: 35,
+                position: 'intern'
+            }, {
+                name: 'anna',
+                age: 55,
+                position: 'SE'
+            },
+
+        ];
+
+        const fruits = ['orange', 'banana', 'mango'];
+        const young = people.filter((person) => person.age < 30)
+            // {
+            //     //     if (person.age < 30)
+            //     //         return person;
+            //     return ;
+            // });
+        console.log(young);
+
+        const developers = people.filter((person) => {
+            return person.position == 'developer';
+        });
+        console.log(developers);
+
+        //find
+        const peter = people.find((persom) => persom.name == 'peter'); //returns object
+        console.log(peter);
+
+        const fruit = fruits.find((myf) => myf == 'banana'); //returns String
+        console.log(fruit);
+
+        const anna = people.filter((person) => person.name === 'anna');
+        console.log(anna[1].position);
+    </script>
+</body>
+
+</html>
